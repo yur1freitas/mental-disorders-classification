@@ -1,0 +1,9 @@
+[datasets]
+root = 'data/'
+raw = "raw/"
+processed = 'processed/'
+default = 'mental_disorders_classification.csv'
+
+[models]
+root = 'models/'
+default = 'model.pkg'

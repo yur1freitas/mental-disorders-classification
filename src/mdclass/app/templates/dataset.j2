@@ -1,0 +1,24 @@
+{% extends 'base.j2' %}
+{% block content %}
+    <section>
+        <div class='group'>
+            <a
+                target='_blank'
+                href='https://www.kaggle.com/datasets/cid007/mental-disorder-classification'
+            >
+                <button>Kaggle</button>
+            </a>
+            <a
+                target='_blank'
+                href='https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/0FNET5'
+            >
+                <button>Hardvard Dataverse</button>
+            </a>
+        </div>
+    </section>
+    <section>
+        {% for table in tables %}<div class='table'>{{ table | safe }}</div>{%
+            endfor
+        %}
+    </section>
+{% endblock %}

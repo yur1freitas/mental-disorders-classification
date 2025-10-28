@@ -1,0 +1,19 @@
+# Vscode
+.vscode/
+
+# Python
+__pycache__/
+wheels/
+build/
+dist/
+*.py[oc]
+*.egg-info
+
+# Virtual Environments
+.venv/
+
+# Ruff
+.ruff_cache/
+
+# Git
+!**/.gitkeep

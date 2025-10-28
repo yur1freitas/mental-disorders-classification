@@ -1,0 +1,52 @@
+{% extends 'base.j2' %}
+{% from "_formhelpers.j2" import render_field %}
+{% block content %}
+    <form method='post'>
+        <div class='field-group'>
+            <fieldset class='field-set'>
+                <legend class='field-legend'>Parâmetros Binários</legend>
+                <p class='field-description'>Sim ou Não</p>
+                <div class='field-group'>
+                    {{ render_field(form.mood_swing) }}
+                    {{ render_field(form.suicidal_thoughts) }}
+                    {{ render_field(form.anorxia) }}
+                    {{ render_field(form.authority_respect) }}
+                    {{ render_field(form.try_explanation) }}
+                    {{ render_field(form.aggressive_response) }}
+                    {{ render_field(form.ignore_and_move_on) }}
+                    {{ render_field(form.nervous_break_down) }}
+                    {{ render_field(form.admit_mistakes) }}
+                    {{ render_field(form.overthinking) }}
+                </div>
+            </fieldset>
+            <hr class='field-separator' />
+            <fieldset class='field-set'>
+                <legend class='field-legend'>Parâmetros Numéricos</legend>
+                <p class='field-description'>Escala de 0 a 10</p>
+                <div class='field-group'>
+                    {{ render_field(form.sexual_activity) }}
+                    {{ render_field(form.concentration) }}
+                    {{ render_field(form.optimisim) }}
+                </div>
+            </fieldset>
+            <hr class='field-separator' />
+            <fieldset class='field-set'>
+                <legend class='field-legend'>Parâmetros de Multiescolha</legend>
+                <p class='field-description'>4 opções</p>
+                <div class='field-group'>
+                    {{ render_field(form.sadness) }}
+                    {{ render_field(form.euphoric) }}
+                    {{ render_field(form.exhausted) }}
+                    {{ render_field(form.sleep_disorder) }}
+                </div>
+            </fieldset>
+            <hr class='field-separator' />
+            <div>
+                <p>
+                    <div>Resultado: {{ result or '' }}</div>
+                </p>
+            </div>
+            <button type='submit'>Enviar</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{
+    "editor.defaultFormatter": "dprint.dprint",
+    "dprint.path": ".venv/bin/dprint",
+
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    }
+}

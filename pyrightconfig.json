@@ -1,0 +1,21 @@
+{
+    "include": ["src"],
+    "exclude": ["**/__pycache__", "**/.ruff_cache"],
+
+    "venv": ".venv",
+    "venvPath": ".",
+
+    "pythonVersion": "3.13",
+    "pythonPlatform": "Linux",
+
+    "reportAny": "none",
+    "reportArgumentType": "none",
+    "reportUnusedCallResult": "none",
+    "reportUnknownMemberType": "none",
+    "reportUnknownVariableType": "none",
+    "reportUnknownArgumentType": "none",
+    "reportMissingImports": "error",
+    "reportMissingTypeStubs": false,
+
+    "executionEnvironments": [{ "root": "scripts/" }, { "root": "src/" }]
+}

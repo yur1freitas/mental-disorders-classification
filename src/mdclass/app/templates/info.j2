@@ -1,0 +1,11 @@
+{% extends 'base.j2' %}
+{% block content %}
+<section>
+    <h2>Hyperparâmetros</h2>
+    <div class='table'>{{ hyperparams | safe }}</div>
+</section>
+<section>
+    <h2>Importância das Features</h2>
+    <div class='table'>{{ feature_importances | safe }}</div>
+</section>
+{% endblock %}

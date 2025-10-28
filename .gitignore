@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+wheels/
+build/
+dist/
+*.py[oc]
+*.egg-info
+
+# Virtual Environments
+.venv
+
+# Ruff
+.ruff_cache
+
+# Outputs
+data/processed/*
+models/*
+
+# Git
+!**/.gitkeep
