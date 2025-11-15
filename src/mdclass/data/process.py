@@ -10,6 +10,15 @@ pd.set_option('future.no_silent_downcasting', True)
 
 
 def _parse_scale(value: str) -> float:
+    """Função responsável por converter os valores em escala do dataset em números
+
+    Args:
+        value (str): Valor em escala
+
+    Returns:
+        float: Retorna o valor numérico correspondente
+    """
+
     try:
         left, right = value.lower().split('from')
         return float(left.strip()) / float(right.strip())
@@ -18,6 +27,12 @@ def _parse_scale(value: str) -> float:
 
 
 def process_dataset() -> pd.DataFrame:
+    """Função responsável por processar o dataset, convertendo todos os valores para números
+
+    Returns:
+        pd.DataFrame: Retorna o dataset processado
+    """
+
     df = load_raw_dataset()
 
     # -------------------------------------------------

@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 
-from mdclass.models import storage
 from mdclass.models.info import hyperparams, feature_importances
+from mdclass.models import storage
 
 info_route = Blueprint('info_route', __name__)
 

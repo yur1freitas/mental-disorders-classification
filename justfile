@@ -20,4 +20,10 @@ build-model:
     MODE=production just process-dataset && just train-model
 
 build-app:
-    uv build -o build
+    MODE=production uv build -o build
+
+docs:
+    uv run pdoc -d google mdclass -o docs/
+
+preview-docs:
+    uv run pdoc -h localhost -p 3000 mdclass

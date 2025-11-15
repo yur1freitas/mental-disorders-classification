@@ -17,3 +17,6 @@ dist/
 
 # Git
 !**/.gitkeep
+
+# Docs
+docs/

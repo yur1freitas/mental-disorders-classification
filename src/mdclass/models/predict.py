@@ -64,7 +64,7 @@ def predict(
     df = pd.get_dummies(df, columns=dummy_cols, drop_first=False)
 
     # -------------------------------------------------
-    # Reorganizando o dataframe com base na ordem dos parâmetros treinados
+    # Reorganizando o DataFrame com base na ordem dos parâmetros treinados
     # -------------------------------------------------
 
     df = df.reindex(model.feature_names_in_, axis=1)

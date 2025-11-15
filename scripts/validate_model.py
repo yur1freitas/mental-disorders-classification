@@ -1,7 +1,7 @@
 from mdclass.data.loaders import load_processed_dataset
-from mdclass.models import storage
 from mdclass.models.training import feature_target_split
 from mdclass.models.validation import cross_val
+from mdclass.models import storage
 
 
 def main() -> None:
