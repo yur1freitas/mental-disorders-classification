@@ -122,11 +122,9 @@ class ModelForm(Form):
     )
 
 
-model = storage.load()
-
-
 @preview_route.route('/preview', methods=['GET', 'POST'])
 def preview():
+    model = storage.load()
     form = ModelForm(request.form)
 
     context: dict[str, str | None] = {'result': None}

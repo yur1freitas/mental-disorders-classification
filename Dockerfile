@@ -54,4 +54,4 @@ USER nonroot
 
 EXPOSE 5000
 
-ENTRYPOINT ["/app/venv/bin/gunicorn", "-b", "0.0.0.0:5000", "mdclass:app"]
+ENTRYPOINT ["/app/venv/bin/gunicorn", "-b", "0.0.0.0:5000", "mdclass.app:create_app()"]

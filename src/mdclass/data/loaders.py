@@ -1,6 +1,8 @@
 from pandas import DataFrame, read_csv
 from pathlib import Path
 
+from cachetools import TTLCache, cached
+
 from mdclass.utils.path import ensure_directory
 from mdclass import config
 
@@ -8,7 +10,10 @@ from mdclass import config
 _RAW_DATASETS_PATH = Path(config.datasets.root, config.datasets.raw)
 _PROCESSED_DATASETS_PATH = Path(config.datasets.root, config.datasets.processed)
 
+_CACHE = TTLCache(10, 60)
 
+
+@cached(_CACHE)
 def load_raw_dataset(filepath: str = config.datasets.default) -> DataFrame:
     """Função responsável por ler os datasets originais sem processamento. Suporte apenas para CSV
 
@@ -41,6 +46,7 @@ def save_processed_dataset(
     dataset.to_csv(path, index=False)
 
 
+@cached(_CACHE)
 def load_processed_dataset(
     filepath: str = config.datasets.default,
 ) -> DataFrame:
