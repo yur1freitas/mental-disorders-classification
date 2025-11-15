@@ -23,7 +23,7 @@ jobs:
       - run: uv venv .venv
       - run: . .venv/bin/activate
       - run: uv sync
-      - run: uv run pdoc -d google src/mdclass/ -o docs/
+      - run: uv run pdoc -d google mdclass mdclass.data mdclass.utils -o docs/
 
       - uses: actions/upload-pages-artifact@v4
         with:
