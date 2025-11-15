@@ -1,15 +1,16 @@
 from typing import Any
 
 import pandas as pd
+
 from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 
+from mdclass.models.training import feature_target_split
 from mdclass.data.loaders import load_processed_dataset
 from mdclass.models import storage
 from mdclass.models.params import (
     SearchBestModelOutput,
     search_best_model,
 )
-from mdclass.models.training import feature_target_split
 
 
 def create_models_cfg():

@@ -1,7 +1,11 @@
 {
     "editor.defaultFormatter": "dprint.dprint",
     "dprint.path": ".venv/bin/dprint",
+    "dprint.experimentalLsp": true,
 
+    "[dockerfile]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     }

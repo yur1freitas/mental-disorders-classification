@@ -7,6 +7,12 @@ _TEMPLATE_FOLDER = 'templates'
 
 
 def create_app() -> Flask:
+    """Função responsável por criar a aplicação (site)
+
+    Returns:
+        Flask: Retorna a instância do Flask
+    """
+
     app = Flask(
         __name__,
         static_folder=_STATIC_FOLDER,

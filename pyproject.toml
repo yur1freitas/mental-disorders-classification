@@ -3,7 +3,7 @@ name = "mdclass"
 version = "0.1.0"
 description = "Machine Learning Model for Mental Disorders Classification"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = [
     "flask>=3.1.2",
     "gunicorn>=23.0.0",
@@ -14,7 +14,12 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["dprint-py>=0.50.2.0", "microsoft-python-type-stubs", "ruff>=0.14.2"]
+dev = [
+    "dprint-py>=0.50.2.0",
+    "microsoft-python-type-stubs",
+    "pdoc>=16.0.0",
+    "ruff>=0.14.2",
+]
 
 [tool.uv.sources]
 microsoft-python-type-stubs = { git = "https://github.com/microsoft/python-type-stubs.git" }

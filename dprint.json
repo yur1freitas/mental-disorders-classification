@@ -1,8 +1,7 @@
 {
-    "malva": {
-        "lineBreak": "lf",
+    "toml": {
         "indentWidth": 4,
-        "printWidth": 80
+        "lineWidth": 80
     },
     "json": {
         "trailingCommas": "never",
@@ -13,26 +12,31 @@
         "textWrap": "always",
         "lineWidth": 80
     },
-    "toml": {
-        "indentWidth": 4,
-        "lineWidth": 80
-    },
-    "dockerfile": {
-        "lineWidth": 80
-    },
     "markup": {
         "lineBreak": "lf",
         "indentWidth": 4,
         "printWidth": 80,
-        "quotes": "single"
+        "associations": ["**/*.j2"]
     },
     "jinja": {
         "lineBreak": "lf",
         "indentWidth": 4,
+        "printWidth": 80,
+        "associations": ["**/*.j2"]
+    },
+    "malva": {
+        "lineBreak": "lf",
+        "indentWidth": 4,
         "printWidth": 80
     },
+    "dockerfile": {
+        "lineWidth": 80
+    },
     "excludes": [
-        "**/*-lock.json"
+        "__pycache__/",
+        "build/",
+        ".venv/",
+        "docs/"
     ],
     "plugins": [
         "https://plugins.dprint.dev/toml-0.7.0.wasm",
@@ -40,7 +44,7 @@
         "https://plugins.dprint.dev/markdown-0.20.0.wasm",
         "https://plugins.dprint.dev/dockerfile-0.3.3.wasm",
         "https://plugins.dprint.dev/g-plane/malva-v0.15.0.wasm",
-        "https://plugins.dprint.dev/g-plane/markup_fmt-v0.24.0.wasm",
+        "https://plugins.dprint.dev/g-plane/markup_fmt-v0.24.1.wasm",
         "https://plugins.dprint.dev/g-plane/pretty_jinja-v0.2.0.wasm"
     ]
 }

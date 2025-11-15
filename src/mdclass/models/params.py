@@ -1,9 +1,8 @@
 from dataclasses import dataclass
 from typing import cast
 
-from pandas import DataFrame, Series
-
 from sklearn.model_selection import GridSearchCV
+from pandas import DataFrame, Series
 
 from mdclass.models.validation import create_cv
 from mdclass.models.base import BaseModel

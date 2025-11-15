@@ -1,6 +1,7 @@
 from typing import final
 
 from flask import Blueprint, render_template, request
+
 from wtforms import BooleanField, Form, IntegerField, SelectField
 from wtforms.validators import NumberRange
 
@@ -127,9 +128,8 @@ model = storage.load()
 @preview_route.route('/preview', methods=['GET', 'POST'])
 def preview():
     form = ModelForm(request.form)
-    context: dict[str, str | None] = {
-        'result': None,
-    }
+
+    context: dict[str, str | None] = {'result': None}
 
     if request.method == 'POST' and form.validate():
         params = PredictInput(**form.data)
