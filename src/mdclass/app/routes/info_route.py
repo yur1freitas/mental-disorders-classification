@@ -5,11 +5,11 @@ from mdclass.models import storage
 
 info_route = Blueprint('info_route', __name__)
 
-model = storage.load()
-
 
 @info_route.route('/info', methods=['GET'])
 def index():
+    model = storage.load()
+
     return render_template(
         'info.j2',
         hyperparams=hyperparams(model).to_html(

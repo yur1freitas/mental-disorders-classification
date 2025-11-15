@@ -4,11 +4,11 @@ from mdclass.data.loaders import load_raw_dataset
 
 dataset_route = Blueprint('dataset_route', __name__)
 
-df = load_raw_dataset()
-
 
 @dataset_route.route('/dataset', methods=['GET'])
 def dataset():
+    df = load_raw_dataset()
+
     return render_template(
         'dataset.j2',
         title='Dataset de Sintomas de Transtornos Mentais',

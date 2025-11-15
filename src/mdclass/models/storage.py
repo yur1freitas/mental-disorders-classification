@@ -1,5 +1,7 @@
 import joblib
 
+
+from cachetools import TTLCache, cached
 from pathlib import Path
 
 from mdclass.utils.path import ensure_directory
@@ -7,6 +9,8 @@ from mdclass.models.base import BaseModel
 from mdclass import config
 
 _MODELS_PATH = Path(config.models.root)
+
+_CACHE = TTLCache(1, 60)
 
 
 def save(
@@ -26,6 +30,7 @@ def save(
     joblib.dump(model, output_path, 1)
 
 
+@cached(_CACHE)
 def load(filename: str = config.models.default) -> BaseModel:
     """Função responsável por carregar o modelo treinando a partir do diretório configurado em 'config.toml'
 

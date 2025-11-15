@@ -5,6 +5,7 @@ description = "Machine Learning Model for Mental Disorders Classification"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "cachetools>=6.2.2",
     "flask>=3.1.2",
     "gunicorn>=23.0.0",
     "numpy>=2.3.4",
