@@ -35,6 +35,8 @@ Um modelo de Machine Learning criado com `scikit-learn` que classifica transtorn
 
 O dataset utilizado para o treinamento desse modelo foi o `Mental Disorders Classification`, disponível no [Kaggle][KAGGLE_DATASET] e no [Harvard Dataverse][HARVARD_DATAVERSE_DATASET]
 
+O modelo apresenta um [Site de Apresentação](http://mdclass.up.railway.app/) e uma [Documentação](https://yur1freitas.github.io/mental-disorders-classification/)
+
 > [!IMPORTANT]
 > Essa ferramenta não substitui nenhum profissioal de saúde! Se fosse implementada em um contexto real, seu propósito seria apenas de auxílio.
 
