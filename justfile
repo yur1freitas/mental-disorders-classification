@@ -23,7 +23,7 @@ build-app:
     MODE=production uv build -o build
 
 docs:
-    uv run pdoc -d google mdclass -o docs/
+    uv run pdoc -d google mdclass mdclass.data mdclass.utils -o docs/
 
 preview-docs:
-    uv run pdoc -h localhost -p 3000 mdclass
+    uv run pdoc -d google -h localhost -p 3000 mdclass mdclass.data mdclass.utils
