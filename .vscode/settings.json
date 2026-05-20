@@ -7,6 +7,7 @@
         "editor.defaultFormatter": "dprint.dprint"
     },
     "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff"
-    }
+        "editor.defaultFormatter": "charliermarsh.ruff",
+    },
+    "pyrefly.lspPath": ".venv/bin/pyrefly"
 }
