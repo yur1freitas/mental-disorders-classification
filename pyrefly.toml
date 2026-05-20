@@ -1,0 +1,20 @@
+python-version = "3.14.0"
+project-includes = ["src"]
+project-excludes = [
+    "**/__pycache__",
+    "**/.ruff_cache",
+]
+
+infer-with-first-use = false
+
+[errors]
+missing-import = "error"
+implicit-any = "ignore"
+untyped-import = "ignore"
+bad-argument-type = "ignore"
+
+[[sub-config]]
+matches = "scripts/"
+
+[[sub-config]]
+matches = "src/"
