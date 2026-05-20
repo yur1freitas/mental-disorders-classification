@@ -1,7 +1,9 @@
+from datetime import datetime
+
 from flask import Blueprint, render_template
 
-from mdclass.models.info import hyperparams, feature_importances
 from mdclass.models import storage
+from mdclass.models.info import feature_importances, hyperparams
 
 info_route = Blueprint('info_route', __name__)
 
@@ -19,4 +21,5 @@ def index():
             header=True, index=False, border=False
         ),
         title='Modelo de Classificação de Transtornos Mentais',
+        year=datetime.now().year,
     )
