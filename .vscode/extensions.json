@@ -3,6 +3,7 @@
         "samuelcolvin.jinjahtml",
         "janisdd.vscode-edit-csv",
         "dprint.dprint",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "meta.pyrefly"
     ]
 }
