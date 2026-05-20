@@ -40,3 +40,8 @@ O modelo apresenta um [Site de Apresentação](http://mdclass.up.railway.app/) e
 > [!IMPORTANT]
 > Essa ferramenta não substitui nenhum profissioal de saúde! Se fosse implementada em um contexto real, seu propósito seria apenas de auxílio.
 
+## Demo
+
+https://github.com/user-attachments/assets/f52eed72-6611-4143-994c-a3327736df8d
+
+
