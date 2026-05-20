@@ -7,6 +7,9 @@ start:
 fmt:
     uv run dprint fmt && uv run ruff format
 
+check:
+    uv run pyrefly check
+    
 process-data:
     uv run -m scripts.process_dataset
 
