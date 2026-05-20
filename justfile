@@ -1,7 +1,7 @@
 dev:
-    uv run flask --app mdclass run
+    uv run flask --app mdclass.app run
 
-start: 
+start:
     uv run gunicorn mdclass:app
 
 fmt:
@@ -9,7 +9,7 @@ fmt:
 
 check:
     uv run pyrefly check
-    
+
 process-data:
     uv run -m scripts.process_dataset
 
