@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from flask import Blueprint, render_template
 
 from mdclass.data.loaders import load_raw_dataset
@@ -12,5 +14,6 @@ def dataset():
     return render_template(
         'dataset.j2',
         title='Dataset de Sintomas de Transtornos Mentais',
+        year=datetime.now().year,
         tables=[df.to_html(header=True, index=False, border=False)],
     )

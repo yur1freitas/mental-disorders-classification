@@ -1,7 +1,7 @@
+from datetime import datetime
 from typing import final
 
 from flask import Blueprint, render_template, request
-
 from wtforms import BooleanField, Form, IntegerField, SelectField
 from wtforms.validators import NumberRange
 
@@ -142,6 +142,7 @@ def preview():
     return render_template(
         'preview.j2',
         title='Model Preview',
+        year=datetime.now().year,
         form=form,
         **context,
     )
