@@ -2,7 +2,7 @@ dev:
     uv run flask --app mdclass.app run
 
 start:
-    uv run gunicorn mdclass:app
+    uv run gunicorn 'mdclass.app:create_app()'
 
 fmt:
     uv run dprint fmt && uv run ruff format
