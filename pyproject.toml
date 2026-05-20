@@ -19,6 +19,7 @@ dev = [
     "dprint-py>=0.50.2.0",
     "microsoft-python-type-stubs",
     "pdoc>=16.0.0",
+    "pyrefly>=1.0.0",
     "ruff>=0.14.2",
 ]
 
