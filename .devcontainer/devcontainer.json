@@ -1,0 +1,20 @@
+{
+    "remoteUser": "dev",
+    "build": { "dockerfile": "Dockerfile", "context": "." },
+    "workspaceFolder": "/workspaces/mdclass",
+    "runArgs": [
+        "-v",
+        "/var/run/docker.sock:/var/run/docker.sock",
+        "--network",
+        "host"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2.16.1": {
+            "moby": false
+        },
+        "ghcr.io/devcontainer-community/devcontainer-features/astral.sh-uv:1.0.6": {
+            "version": "0.11.15"
+        }
+    },
+    "postCreateCommand": ["/bin/sh", ".devcontainer/postCreateCommand.sh"]
+}
