@@ -7,7 +7,7 @@ ENV LANGUAGE=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
 RUN apt-get update -y && \
-    apt-get install sudo-rs git starship vim locales locales-all bash-completion -y && \
+    apt-get install sudo-rs git just starship vim locales locales-all bash-completion -y && \
     rm -rf /var/lib/apt/lists/* && \
     ln -s /usr/bin/sudo-rs /usr/bin/sudo
 
