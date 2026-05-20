@@ -20,7 +20,7 @@ validate:
     uv run -m scripts.validate_model
 
 build-model:
-    MODE=production just process-dataset && just train-model
+    MODE=production just process-data && just train
 
 build-app:
     MODE=production uv build -o build
